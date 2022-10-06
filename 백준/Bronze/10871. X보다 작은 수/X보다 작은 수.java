@@ -11,19 +11,19 @@ public class Main {
         int N = Integer.parseInt(st.nextToken());
         int X = Integer.parseInt(st.nextToken());
 
-        //결과 문자열 선언
-        String result = "";
+        //append 쓸거여서 StringBuilder로 result 선언
+        StringBuilder result = new StringBuilder("");
 
         //토크나이저로 수열 받아서 N만큼 반복 순회
-        StringTokenizer stArr = new StringTokenizer(br.readLine(), " ");
+        st = new StringTokenizer(br.readLine(), " ");
         for (int i = 0; i < N; i++){
-            //수열 요소 받고, X보다 작은지 확인해서 String.format으로 띄어쓰기
-            int num = Integer.parseInt(stArr.nextToken());
+            //수열 요소 받고, X보다 작은지 확인해서 append로 문자열 뒤에 추가
+            int num = Integer.parseInt(st.nextToken());
+
             if (num < X) {
-               result = String.format("%s %d", result, num);
+               result.append(num).append(' ');
             }
         }
-        // 맨 앞 공백 제거
-        System.out.println(result.strip());
+        System.out.println(result);
     }
 }
