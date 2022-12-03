@@ -6,9 +6,8 @@ import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        /* 입력값 받아오기. N개, M개의 수를 배열로 가져온다. */
-        /* int N과 M은 사용하지 않음 */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder("");
 
         int N = Integer.parseInt(br.readLine());
         String[] numN = br.readLine().split(" ");
@@ -16,8 +15,7 @@ public class Main {
         int M = Integer.parseInt(br.readLine());
         String[] numM = br.readLine().split(" ");
 
-        /* StringBuilder 사용해서 출력 예정 */
-        StringBuilder sb = new StringBuilder("");
+        br.close();
 
         /* HashMap 이용하여 key:value = 수:갯수로 저장 */
         /* HashMap 첫 저장값은 1, 키가 이미 맵에 있으면 +1 해서 값 덮어준다 */
@@ -41,6 +39,7 @@ public class Main {
                 sb.append(0).append(" ");
             }
         }
+
         System.out.println(sb);
     }
 }
