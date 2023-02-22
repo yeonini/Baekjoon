@@ -53,11 +53,10 @@ public class Main {
 			}
 			if (result && st.empty()) {
 				sb.append("yes").append('\n');
-				st.clear();
 			} else {
 				sb.append("no").append('\n');
-				st.clear();
 			}
+            st.clear();
 		}
 		br.close();
 		System.out.println(sb);
